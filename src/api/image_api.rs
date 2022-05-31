@@ -13,7 +13,7 @@ pub fn config(cfg: &mut web::ServiceConfig) {
 
 #[get("/{md5}")]
 pub async fn show(md5: web::Path<String>) -> HttpResponse {
-	println!("md5{}", md5);
+	println!("md5{}", md5.into_inner());
 	
 	HttpResponse::Ok()
 	.content_type(ContentType::plaintext())
