@@ -1,0 +1,60 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "图床"
+  },
+  "host": "virtserver.swaggerhub.com",
+  "basePath": "/volunteercai/imagecloud/1.0.0",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/image/show/{md5}": {
+      "get": {
+        "tags": [
+          "图片"
+        ],
+        "summary": "显示图片",
+        "parameters": [
+          {
+            "name": "md5",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/image/upload": {
+      "post": {
+        "tags": [
+          "图片"
+        ],
+        "summary": "上传图片",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Model": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+  }
+}
