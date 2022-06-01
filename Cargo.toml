@@ -14,3 +14,4 @@ uuid = { version = "0.8", features = ["v4"] }
 sqlx = { version = "0.5", features = ["runtime-tokio-rustls"] }
 futures-util = { version = "0.3.7", default-features = false, features = ["std"] }
 sanitize-filename = "0.3"
+tokio = { version = "1.18.2", features = ["full"] }
